@@ -11,7 +11,7 @@ Simple and shitty script to parse raw http requests, best suited for "requests" 
     body = parse['body'] #body of the request
     url = parse['url'] #url for the request
     method = parse['method'] #http request method
-		request(method=method, url=url, data=body,headers=headers)
+    request(method=method, url=url, data=body,headers=headers)
 		
-		#Or just use excat copy from the raw request
-		req = raw['request']() #executes same request as in the submitted raw
+    #Or just use excat copy from the raw request
+    req = raw['request']() #executes same request as in the submitted raw
