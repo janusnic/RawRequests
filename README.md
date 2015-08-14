@@ -1,6 +1,6 @@
 # RawRequests
 
-Simple and shitty script to parse raw http requests for "requests" library. Started out in python less that few months ago so don't be too harsh.
+Simple and shitty script to parse raw http requests, best suited for "requests" library. Started out in python less that few months ago so don't be too harsh.
 
     import requests
     
