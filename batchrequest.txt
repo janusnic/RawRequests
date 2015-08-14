@@ -1,0 +1,10 @@
+GET https://www.reddit.com/ HTTP/1.1
+Host: www.reddit.com
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36
+Referer: https://www.reddit.com/r/leagueoflegends
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: lt,en-US;q=0.8,en;q=0.6,ru;q=0.4,pl;q=0.2
