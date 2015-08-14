@@ -6,7 +6,7 @@ Simple and shitty script to parse raw http requests, best suited for "requests" 
     
     from raw_requests import parse_raw
     
-    parsed = parse_raw('path_to_request_template.txt')
+    parsed = parse_raw('request_template.txt')
     
     #Manually create the request
     headers = parsed['headers']
@@ -16,4 +16,4 @@ Simple and shitty script to parse raw http requests, best suited for "requests" 
     requests.request(method=method, url=url, data=body,headers=headers)
 		
     #Or just use exact copy from the raw request
-    req = parsed['request']() #executes same request as in the submitted raw
+    req = parsed['_request']() #executes same request as in the submitted raw
