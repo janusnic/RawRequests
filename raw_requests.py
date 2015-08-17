@@ -36,12 +36,8 @@ def parse_raw(raw_path):
                 body = parsedb
                 first_body_line = False
             else:
-<<<<<<< HEAD:raw_requests.py
                 body = "{}\n{}".format(body, parsedb)
 
-=======
-                body = "\n{}{}".format(body, parsedb)
->>>>>>> 00f700ab24bbc228b82475a2c5f529860c5578ef:raw_requests.py
 
         line_number += 1
 
