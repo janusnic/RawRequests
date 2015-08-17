@@ -18,7 +18,7 @@ def parse_raw(raw_path):
     line_number = 1
 
     for line in lines:
-        if not line.strip():    #Checks if current line is empty to know where is the end of header/start of body
+        if not line.strip() and not header_is_finished:    #Checks if current line is empty to know where is the end of header/start of body
             header_is_finished = True   #A way to know if header is finished
 
         elif line_number == 1:  #If it's the first line we get request url and method
@@ -31,14 +31,11 @@ def parse_raw(raw_path):
             headers.update({key.strip() : value.strip() })
 
         elif header_is_finished:    #If header part of the request is finished that means it's time for BODY
-            parsedb = line.strip()
             if first_body_line:
-                body = parsedb
+                body = line
                 first_body_line = False
             else:
-                body = "{}\n{}".format(body, parsedb)
-
-
+                body = "{}{}".format(body, line)
         line_number += 1
 
     return {
